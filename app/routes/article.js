@@ -4,9 +4,9 @@ const authorization = require('../middleware/auth');
 
 const router = express.Router();
 
-router.post('/article/post', authorization, postArticle);
-router.patch('/article/edit/:id', authorization, editArticle);
+router.post('/article', authorization, postArticle);
+router.patch('/article/:id', authorization, editArticle);
 router.get('/article', articles);
-router.delete('/article/delete/:id', authorization, deleteArticle);
+router.delete('/article/:id', authorization, deleteArticle);
 
 module.exports = router;
